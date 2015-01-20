@@ -1,0 +1,96 @@
+// Layout
+
+@page-width: 8.5in;
+@page-height: 11in;
+@page-margin: 0.75in 0.75in 1in 0.75in;
+
+@page-column-count: 2;
+@page-column-fill: balance;
+@page-column-gap: 0.33in;
+
+@footnote-column-count: @page-column-count;
+@footnote-float: prince-column-footnote;
+
+@footnotes-margin-top: 2em;
+@footnotes-padding: 1em;
+@footnotes-border: 0.5px solid #000;
+
+@table-margin: 1.667em 0 1em;
+@table-cell-padding: 0.333em;
+@table-border: 0.5px solid #000;
+
+@figure-margin: 1.333em 0 2.333em;
+@caption-margin: 0 0 4pt;
+@caption-side: top;
+
+// Typography
+
+@font-family-sans-serif: Helvetica, sans-serif;
+@font-family-serif: "Times New Roman", Times, serif;
+@font-family-monospace: Courier, monospace;
+@font-family-base: @font-family-serif;
+
+@font-size-base: 9pt;
+@font-size-small: 7/9em;
+@font-size-code: 8/9em;
+
+@font-size-h1: 12/9em;
+@font-size-h2: @font-size-h1;
+@font-size-h3: 11/9em;
+@font-size-h4: @font-size-h3;
+@font-size-h5: @font-size-h3;
+@font-size-h6: @font-size-h3;
+
+@font-size-page-number: @font-size-base;
+
+@line-height-base: 1.17;
+@hyphens-base: auto;
+@text-align-base: justify;
+@paragraph-margin: 0 0 0.5em;
+@paragraph-indent: 0;
+
+@headings-font-family: @font-family-serif;
+@headings-font-weight: bold;
+@headings-hyphens: none;
+
+@caption-weight: bold;
+@figcaption-weight: @caption-weight;
+
+// Counters
+
+@page-number-enabled: false;
+@page-number-position: bottom;
+@page-number-style: decimal;
+@page-number-start: 1;
+
+@header-counter-enabled: true;
+@counter-h1: section;
+@counter-h2: subsection;
+@counter-h3: subsubsection;
+@counter-h4: subsubsection;
+@counter-h5: subsubsubsection;
+@counter-h6: subsubsubsubsection;
+
+@counter-h1-style: decimal;
+@counter-h2-style: @counter-h1-style;
+@counter-h3-style: @counter-h1-style;
+@counter-h4-style: @counter-h1-style;
+@counter-h5-style: @counter-h1-style;
+@counter-h6-style: @counter-h1-style;
+
+@counter-header-prefix: "";
+@counter-header-suffix: "";
+@counter-header-separator: ".";
+
+@table-prefix: "Table ";
+@table-suffix: ". ";
+
+@figure-prefix: "Figure ";
+@figure-suffix: ". ";
+
+@cite-prefix: "[";
+@cite-suffix: "]";
+@cites-separator: ", ";
+
+@ref-prefix: @cite-prefix;
+@ref-suffix: @cite-suffix;

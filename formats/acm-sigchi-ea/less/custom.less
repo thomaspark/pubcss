@@ -1,0 +1,148 @@
+@page {
+
+  @top-left {
+    content: "";
+    width: 50%;
+    margin: -0.35in 0 0 -2in;
+    font-family: Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+
+  @top-right {
+    content: "";
+    margin: -0.35in -0.25in 0 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+
+  @bottom-right {
+    margin: -0.35in -0.25in 0 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+}
+
+header {
+  column-span: all;
+  margin-bottom: 38pt;
+
+  h1 {
+    margin-left: 1.52in;
+    padding-top: 3pt;
+    border-top: 3pt solid black;
+    line-height: 24pt;
+    font-family: Helvetica;
+    font-size: 24pt;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+p + h1,
+p + h2,
+p + ul,
+p + ol {
+  margin-top: 11.5pt;
+}
+
+ul,
+ol {
+  margin-left: 18pt;
+  margin-bottom: 15pt;
+  list-style-type: square;
+}
+
+li {
+  margin-left: -3pt;
+  margin-bottom: 4pt;
+  padding-left: 5pt;
+  line-height: @line-height-base;
+}
+
+table {
+  page-break-inside: avoid;
+}
+
+caption,
+figcaption {
+  margin-top: 3pt;
+  text-align: left;
+  font-size: 7.5pt;
+
+  &:before {
+    font-weight: bold;
+  }
+}
+
+.authors {
+  column-gap: 0.12in;
+  column-count: 2;
+}
+
+.author {
+  page-break-inside: avoid;
+  margin-bottom: 10pt;
+  font-size: 7.5pt;
+  line-height: 12pt;
+
+    & > :first-child {
+    font-weight: bold;
+  }
+}
+
+.copyright {
+  float: column-bottom;
+  font-size: 7pt;
+  line-height: 8.5pt;
+
+  > * {
+    position: absolute;
+    left: 0;
+    bottom: 2em;
+    width: 3.38in;
+  }
+
+  ul,
+  li {
+    margin-bottom: 0;
+  line-height: 8.5pt;
+  }
+}
+
+.abstract {
+  column-break-before: always;
+  margin-bottom: 11.5pt;
+}
+
+footnote {
+  margin-left: 3pt;
+  padding-left: 6pt;
+  font-size: 7.5pt;
+
+  &::footnote-marker {
+    font-size: 7.5pt;
+  }
+}
+
+ref {
+  margin-bottom: 4pt;
+}
+
+aside {
+  position: absolute;
+  left: 0;
+  float: left;
+  width: 2in;
+  margin-left: -2in + -15pt;
+  page-break-inside: avoid;
+}

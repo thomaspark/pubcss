@@ -1,0 +1,438 @@
+@page {
+  size: 11in 8.5in;
+  margin: 1.6in 1in 0.8in 2.75in;
+  
+  @footnotes {
+    columns: 2;
+    margin-top: 2em;
+    border-top: 0.5px solid #000000;
+    padding-top: 3px;
+  }
+}
+body {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: balance;
+  -moz-column-gap: balance;
+  column-gap: balance;
+  -webkit-column-gap: 0.5in;
+  -moz-column-gap: 0.5in;
+  column-gap: 0.5in;
+}
+footnote {
+  float: prince-column-footnote;
+}
+caption {
+  caption-side: bottom;
+}
+html {
+  font-size: 8.5pt;
+}
+body {
+  font-family: Verdana, Helvetica, sans-serif;
+  text-align: left;
+  hyphens: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-column-break-after: avoid;
+  column-break-after: avoid;
+  break-after: avoid;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+  hyphens: none;
+}
+h1 {
+  font-size: 9.5pt;
+}
+h2 {
+  font-size: 8.5pt;
+}
+h3 {
+  font-size: 8.5pt;
+}
+h4 {
+  font-size: 8.5pt;
+}
+h5 {
+  font-size: 8.5pt;
+}
+h6 {
+  font-size: 8.5pt;
+}
+p {
+  margin: 0 0 6pt;
+  line-height: 1.412;
+  text-indent: 0;
+}
+small {
+  font-size: 7.5pt;
+}
+code {
+  font-family: Courier, monospace;
+  font-size: 9pt;
+  font-weight: 400;
+  white-space: nowrap;
+}
+q:before {
+  content: "“";
+}
+q:after {
+  content: "”";
+}
+q > q:before {
+  content: "‘";
+}
+q > q:after {
+  content: "’";
+}
+table {
+  width: 100%;
+  margin: 9pt 0 11.5pt;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 3pt;
+  border: 1px solid #000000;
+  text-align: center;
+}
+caption {
+  margin: 6pt 0 0;
+  font-weight: normal;
+}
+figure {
+  margin: 9pt 0 21pt;
+  text-align: center;
+}
+figcaption {
+  font-weight: normal;
+}
+footnote {
+  margin-left: 0.333em;
+  padding-left: 0.667em;
+}
+footnote::footnote-call {
+  vertical-align: super;
+  line-height: none;
+  font-size: 66%;
+}
+footnote::footnote-marker {
+  font-size: 66%;
+  footnote-style-position: inside;
+}
+ref {
+  display: block;
+  position: relative;
+  margin-left: 2.5em;
+  -webkit-column-break-inside: avoid;
+  column-break-inside: avoid;
+  break-inside: avoid;
+  text-align: left;
+}
+ref:before {
+  position: absolute;
+  display: inline-block;
+  margin-left: -2.5em;
+}
+ref a {
+  text-decoration: none;
+}
+cite {
+  font-style: normal;
+}
+@page {
+}
+body > :first-child {
+  counter-reset: page 1;
+}
+table {
+  counter-increment: table;
+}
+caption:before {
+  content: "Table " counter(table) ". ";
+}
+figure {
+  counter-increment: figure;
+}
+figcaption:before {
+  content: "Figure " counter(figure) ". ";
+}
+footnote {
+  counter-increment: footnote;
+}
+footnote::footnote-call {
+  content: counter(footnote);
+}
+footnote::footnote-marker {
+  content: counter(footnote);
+}
+cite {
+  content: target-counter(attr(href, url), reference);
+}
+cite:before {
+  content: "[";
+}
+cite:after {
+  content: "]";
+}
+cite.section {
+  content: target-counter(attr(href, url), section);
+}
+cite.section:before {
+  content: "";
+}
+cite.section:after {
+  content: "";
+}
+cite.subsection {
+  content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection);
+}
+cite.subsection:before {
+  content: "";
+}
+cite.subsection:after {
+  content: "";
+}
+cite.subsubsection {
+  content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection) "." target-counter(attr(href, url), subsubsection);
+}
+cite.subsubsection:before {
+  content: "";
+}
+cite.subsubsection:after {
+  content: "";
+}
+cite.subsubsubsection {
+  content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection) "." target-counter(attr(href, url), subsubsection) "." target-counter(attr(href, url), subsubsubsection);
+}
+cite.subsubsubsection:before {
+  content: "";
+}
+cite.subsubsubsection:after {
+  content: "";
+}
+cite.figure {
+  content: target-counter(attr(href, url), figure);
+}
+cite.figure:before {
+  content: "Figure ";
+}
+cite.figure:after {
+  content: "";
+}
+cite.table {
+  content: target-counter(attr(href, url), table);
+}
+cite.table:before {
+  content: "Table ";
+}
+cite.table:after {
+  content: "";
+}
+cites > :not(:first-child):before {
+  content: none;
+}
+cites > :not(:last-child):after {
+  content: ", ";
+}
+ref {
+  counter-increment: reference;
+}
+ref:before {
+  content: "[" counter(reference) "]";
+}
+.col-1 {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+.col-2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+.col-3 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+.col-4 {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+}
+.col-span {
+  -webkit-column-span: all;
+  -moz-column-span: all;
+  column-span: all;
+}
+.page-break-after {
+  -webkit-column-break-after: always;
+  column-break-after: always;
+  break-after: always;
+}
+.page-break-before {
+  -webkit-column-break-after: always;
+  column-break-after: always;
+  break-after: always;
+}
+.col-break-after {
+  -webkit-column-break-after: always;
+  column-break-after: always;
+  break-after: always;
+}
+.col-break-before {
+  -webkit-column-break-after: always;
+  column-break-after: always;
+  break-after: always;
+}
+.counter-skip h1:before,
+.counter-skip h2:before,
+.counter-skip h3:before,
+.counter-skip h4:before,
+.counter-skip h5:before,
+.counter-skip h6:before,
+.counter-skip:before {
+  margin-right: 0 !important;
+  content: "" !important;
+}
+@page {
+  @top-left {
+    content: "";
+    width: 50%;
+    margin: -0.35in 0 0 -2in;
+    font-family: Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+  @top-right {
+    content: "";
+    margin: -0.35in -0.25in 0 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+  @bottom-right {
+    margin: -0.35in -0.25in 0 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+  }
+}
+header {
+  column-span: all;
+  margin-bottom: 38pt;
+}
+header h1 {
+  margin-left: 1.52in;
+  padding-top: 3pt;
+  border-top: 3pt solid black;
+  line-height: 24pt;
+  font-family: Helvetica;
+  font-size: 24pt;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: italic;
+  font-weight: normal;
+}
+p + h1,
+p + h2,
+p + ul,
+p + ol {
+  margin-top: 11.5pt;
+}
+ul,
+ol {
+  margin-left: 18pt;
+  margin-bottom: 15pt;
+  list-style-type: square;
+}
+li {
+  margin-left: -3pt;
+  margin-bottom: 4pt;
+  padding-left: 5pt;
+  line-height: 1.412;
+}
+table {
+  page-break-inside: avoid;
+}
+caption,
+figcaption {
+  margin-top: 3pt;
+  text-align: left;
+  font-size: 7.5pt;
+}
+caption:before,
+figcaption:before {
+  font-weight: bold;
+}
+.authors {
+  column-gap: 0.12in;
+  column-count: 2;
+}
+.author {
+  page-break-inside: avoid;
+  margin-bottom: 10pt;
+  font-size: 7.5pt;
+  line-height: 12pt;
+}
+.author > :first-child {
+  font-weight: bold;
+}
+.copyright {
+  float: column-bottom;
+  font-size: 7pt;
+  line-height: 8.5pt;
+}
+.copyright > * {
+  position: absolute;
+  left: 0;
+  bottom: 2em;
+  width: 3.38in;
+}
+.copyright ul,
+.copyright li {
+  margin-bottom: 0;
+  line-height: 8.5pt;
+}
+.abstract {
+  column-break-before: always;
+  margin-bottom: 11.5pt;
+}
+footnote {
+  margin-left: 3pt;
+  padding-left: 6pt;
+  font-size: 7.5pt;
+}
+footnote::footnote-marker {
+  font-size: 7.5pt;
+}
+ref {
+  margin-bottom: 4pt;
+}
+aside {
+  position: absolute;
+  left: 0;
+  float: left;
+  width: 2in;
+  margin-left: -2.2083333333333335in;
+  page-break-inside: avoid;
+}

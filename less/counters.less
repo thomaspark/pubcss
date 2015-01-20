@@ -1,0 +1,152 @@
+@page {
+  .page-number;
+}
+
+.page-number() when (@page-number-enabled = true) {
+  @{at}@{page-number-position} {
+    content: counter(page, @page-number-style);
+    font-size: @font-size-page-number;
+  }
+}
+
+body > :first-child {
+  counter-reset: page @page-number-start;
+}
+
+.header-counter;
+
+.header-counter() when (@header-counter-enabled = true) {
+  .generate-counter-increments;
+  .generate-counter-resets;
+  .generate-counter-content;
+}
+
+table {
+  counter-increment: table;
+}
+
+caption:before {
+  content: @table-prefix counter(table) @table-suffix;
+}
+
+figure {
+  counter-increment: figure;
+}
+
+figcaption:before {
+  content: @figure-prefix counter(figure) @figure-suffix;
+}
+
+footnote {
+  counter-increment: footnote;
+
+  &::footnote-call {
+    content: counter(footnote);
+  }
+
+  &::footnote-marker {
+    content: counter(footnote);
+  }
+}
+
+cite {
+  content: target-counter(attr(href, url), reference);
+
+  &:before {
+    content: @cite-prefix;
+  }
+
+  &:after {
+    content: @cite-suffix;
+  }
+
+  &.section {
+    content: target-counter(attr(href, url), section);
+
+    &:before {
+      content: @counter-header-prefix;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
+
+  &.subsection {
+    content: target-counter(attr(href, url), section) @counter-header-separator target-counter(attr(href, url), subsection);
+
+    &:before {
+      content: @counter-header-prefix;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
+
+  &.subsubsection {
+    content: target-counter(attr(href, url), section) @counter-header-separator target-counter(attr(href, url), subsection) @counter-header-separator target-counter(attr(href, url), subsubsection);
+
+    &:before {
+      content: @counter-header-prefix;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
+
+  &.subsubsubsection {
+    content: target-counter(attr(href, url), section) @counter-header-separator target-counter(attr(href, url), subsection) @counter-header-separator target-counter(attr(href, url), subsubsection) @counter-header-separator target-counter(attr(href, url), subsubsubsection);
+
+    &:before {
+      content: @counter-header-prefix;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
+
+  &.figure {
+    content: target-counter(attr(href, url), figure);
+
+    &:before {
+      content: @figure-prefix;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
+
+  &.table {
+    content: target-counter(attr(href, url), table);
+
+    &:before {
+      content: @table-prefix;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
+}
+
+cites {
+  & > :not(:first-child):before {
+    content: none;
+  }
+
+  & > :not(:last-child):after {
+    content: @cites-separator;
+  }
+}
+
+ref {
+  counter-increment: reference;
+
+  &:before {
+    content: @ref-prefix counter(reference) @ref-suffix;
+  }
+}

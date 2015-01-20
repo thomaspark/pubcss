@@ -1,0 +1,45 @@
+.col-1 {
+  .column-count(1);
+}
+
+.col-2 {
+  .column-count(2);
+}
+
+.col-3 {
+  .column-count(3);
+}
+
+.col-4 {
+  .column-count(4);
+}
+
+.col-span {
+  .column-span(all);
+}
+
+.page-break-after {
+  .page-break-after(always)
+}
+
+.page-break-before {
+  .page-break-before(always);
+}
+
+.col-break-after {
+  .column-break-after(always);
+}
+
+.col-break-before {
+  .column-break-before(always);
+}
+
+.counter-skip {
+
+  h1, h2, h3, h4, h5, h6, & {
+    &:before {
+      margin-right: 0 !important;
+      content: "" !important;
+    }
+  }
+}

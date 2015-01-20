@@ -1,0 +1,29 @@
+@page {
+  size: @page-width @page-height;
+  margin: @page-margin;
+
+  .footnotes;
+}
+
+.footnotes() {
+  @{at}footnotes {
+    columns: @footnote-column-count;
+    margin-top: @footnotes-margin-top;
+    border-top: @footnotes-border;
+    padding-top: @footnotes-padding;
+  }
+}
+
+body {
+  .column-count(@page-column-count);
+  .column-fill(@page-column-fill);
+  .column-gap(@page-column-gap);
+}
+
+footnote {
+  float: @footnote-float;
+}
+
+caption {
+  caption-side: @caption-side;
+}

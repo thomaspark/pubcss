@@ -1,0 +1,187 @@
+.abstract {
+  font-size: 9pt;
+  font-weight: bold;
+
+  p {
+    margin-bottom: 12pt;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1, h5 {
+  margin-bottom: 4pt;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+h3 {
+  text-indent: @paragraph-indent;
+}
+
+h4 {
+  text-indent: 1.5*@paragraph-indent;
+}
+
+h2 {
+  margin-bottom: 2pt;
+  font-style: italic;
+}
+
+h3, h4, h5 {
+  page-break-after: auto;
+}
+
+h2:not(.counter-skip):before {
+  content: @counter-header-prefix counter(@counter-h2, @counter-h2-style) @counter-header-suffix;
+}
+
+h5:not(.counter-skip):before {
+  content: none;
+}
+
+h1 + h2,
+h1 + * > h2:first-child {
+  margin-top: 10pt;
+}
+
+h3, h4 {
+  margin: @font-size-h1 0 0 0;
+  font-style: italic;
+}
+
+ul {
+  margin-left: 2.5em;
+}
+
+li {
+  margin-bottom: 6pt;
+}
+
+ol {
+  list-style: none;
+  counter-reset: ol;
+  margin-left: 0;
+  text-indent: @paragraph-indent;
+
+  > li:before {
+    counter-increment: ol;
+    content: counter(ol, decimal) ") ";
+    font-style: italic;
+  }
+}
+
+ol ol {
+  text-indent: 2*@paragraph-indent;
+
+  > li:before {
+    counter-increment: ol;
+    content: counter(ol, lower-alpha) ") "
+  }
+}
+
+.title {
+  margin-bottom: 5pt;
+  font-size: 24pt;
+  font-variant: normal;
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 35pt;
+  font-size: 14pt;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+
+header {
+  column-span: all;
+  margin-bottom: 22pt;
+}
+
+table {
+  font-size: @font-size-small;
+}
+
+caption,
+figcaption {
+  font-size: @font-size-small;
+  font-weight: normal;
+}
+
+caption {
+  font-variant: small-caps;
+}
+
+figcaption {
+  text-align: left;
+}
+
+footnote {
+  font-size: 8pt;
+}
+
+footnote {
+  margin-bottom: -0.38in;
+  font-size: 8pt;
+
+  &::footnote-call,
+  &::footnote-marker {
+    display: none;
+    content: none;
+  }
+}
+
+.authors {
+  column-gap: 0;
+
+  + .authors {
+    margin-top: 6pt;
+  }
+}
+
+.author {
+  break-inside: avoid;
+  column-break-after: always;
+  text-align: center;
+
+  & > :first-child {
+    font-size: 11pt;
+  }
+}
+
+.equation {
+  margin: 12pt 0 8pt;
+  text-align: center;
+
+  &:not(.displaymath) {
+    position: relative;
+    counter-increment: equation;
+
+    &:after {
+      content: "(" counter(equation) ")";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      bottom: 50%;
+      line-height: 0;
+    }
+  }
+}
+
+.references {
+  margin-top: 18pt;
+}
+
+h1.references {
+  margin-top: 24pt;
+}
+
+ref {
+  margin-bottom: 3pt;
+  font-size: @font-size-small;
+  text-align: left;
+}
