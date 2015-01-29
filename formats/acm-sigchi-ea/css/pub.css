@@ -126,25 +126,27 @@ footnote::footnote-marker {
   font-size: 66%;
   footnote-style-position: inside;
 }
-ref {
+cite {
   display: block;
   position: relative;
   margin-left: 2.5em;
   -webkit-column-break-inside: avoid;
   column-break-inside: avoid;
   break-inside: avoid;
+  font-style: normal;
   text-align: left;
 }
-ref:before {
+cite:before {
   position: absolute;
   display: inline-block;
   margin-left: -2.5em;
 }
-ref a {
+cite a {
   text-decoration: none;
 }
-cite {
-  font-style: normal;
+a[href^="#"] {
+  color: inherit;
+  text-decoration: none;
 }
 @page {
   
@@ -173,67 +175,67 @@ footnote::footnote-call {
 footnote::footnote-marker {
   content: counter(footnote);
 }
-cite {
+a[href^="#"] {
   content: target-counter(attr(href, url), reference);
 }
-cite:before {
+a[href^="#"]:before {
   content: "[";
 }
-cite:after {
+a[href^="#"]:after {
   content: "]";
 }
-cite.section {
+a[href^="#"].section {
   content: target-counter(attr(href, url), section);
 }
-cite.section:before {
+a[href^="#"].section:before {
   content: "";
 }
-cite.section:after {
+a[href^="#"].section:after {
   content: "";
 }
-cite.subsection {
+a[href^="#"].subsection {
   content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection);
 }
-cite.subsection:before {
+a[href^="#"].subsection:before {
   content: "";
 }
-cite.subsection:after {
+a[href^="#"].subsection:after {
   content: "";
 }
-cite.subsubsection {
+a[href^="#"].subsubsection {
   content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection) "." target-counter(attr(href, url), subsubsection);
 }
-cite.subsubsection:before {
+a[href^="#"].subsubsection:before {
   content: "";
 }
-cite.subsubsection:after {
+a[href^="#"].subsubsection:after {
   content: "";
 }
-cite.subsubsubsection {
+a[href^="#"].subsubsubsection {
   content: target-counter(attr(href, url), section) "." target-counter(attr(href, url), subsection) "." target-counter(attr(href, url), subsubsection) "." target-counter(attr(href, url), subsubsubsection);
 }
-cite.subsubsubsection:before {
+a[href^="#"].subsubsubsection:before {
   content: "";
 }
-cite.subsubsubsection:after {
+a[href^="#"].subsubsubsection:after {
   content: "";
 }
-cite.figure {
+a[href^="#"].figure {
   content: target-counter(attr(href, url), figure);
 }
-cite.figure:before {
+a[href^="#"].figure:before {
   content: "Figure ";
 }
-cite.figure:after {
+a[href^="#"].figure:after {
   content: "";
 }
-cite.table {
+a[href^="#"].table {
   content: target-counter(attr(href, url), table);
 }
-cite.table:before {
+a[href^="#"].table:before {
   content: "Table ";
 }
-cite.table:after {
+a[href^="#"].table:after {
   content: "";
 }
 cites > :not(:first-child):before {
@@ -242,10 +244,10 @@ cites > :not(:first-child):before {
 cites > :not(:last-child):after {
   content: ", ";
 }
-ref {
+cite {
   counter-increment: reference;
 }
-ref:before {
+cite:before {
   content: "[" counter(reference) "]";
 }
 .col-1 {

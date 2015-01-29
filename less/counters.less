@@ -49,7 +49,7 @@ footnote {
   }
 }
 
-cite {
+a[href^="#"] {
   content: target-counter(attr(href, url), reference);
 
   &:before {
@@ -143,7 +143,7 @@ cites {
   }
 }
 
-ref {
+cite {
   counter-increment: reference;
 
   &:before {

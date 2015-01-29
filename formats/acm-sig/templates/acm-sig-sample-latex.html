@@ -154,13 +154,13 @@
 
       <h2>Type Changes and <em>Special</em> Characters</h2>
       <p>We have already seen several typeface changes in this sample. You can indicate italicized words or phrases in your text with the command <code>\textit</code>; emboldening with the command <code>\textbf</code> and typewriter-style (for instance, for computer code) with <code>\texttt</code>. But remember, you do not have to indicate typestyle changes when such changes are part of the <em>structural</em> elements of your article; for instance, the heading of this subsection will be in a sans serif<footnote>A third footnote, here. Let’s make this a rather short one to see how it looks.</footnote> typeface, but that is handled by the document class file. Take care with the use of<footnote>A fourth, and last, footnote.</footnote> the curly braces in typeface changes; they mark the beginning and end of the text that is to be in the different typeface.</p>
-      <p>You can use whatever symbols, accented characters, or non-English characters you need anywhere in your document; you can find a complete list of what is available in the <em><span class="latex">L<span>a</span>T<span>e</span>X</span> User’s Guide</em><cite href="#lamport86"></cite>.</p>
+      <p>You can use whatever symbols, accented characters, or non-English characters you need anywhere in your document; you can find a complete list of what is available in the <em><span class="latex">L<span>a</span>T<span>e</span>X</span> User’s Guide</em><a href="#lamport86"></a>.</p>
 
       <h2>Math Equations</h2>
       <p>You may want to display math equations in three distinct styles: inline, numbered or non-numbered display. Each of the three are discussed in the next sections.</p>
 
       <h3>Inline (In-text) Equations</h3>
-      <p>A formula that appears in the running text is called an inline or in-text formula. It is produced by the <strong>math</strong> environment, which can be invoked with the usual <code>\begin. . .\end</code> construction or with the short form <code>$. . .$</code>. You can use any of the symbols and structures, from α to ω, available in <span class="latex">L<span>a</span>T<span>e</span>X</span><cite href="#lamport86"></cite>; this section will simply show a few examples of in-text equations in context. Notice how this equation: 
+      <p>A formula that appears in the running text is called an inline or in-text formula. It is produced by the <strong>math</strong> environment, which can be invoked with the usual <code>\begin. . .\end</code> construction or with the short form <code>$. . .$</code>. You can use any of the symbols and structures, from α to ω, available in <span class="latex">L<span>a</span>T<span>e</span>X</span><a href="#lamport86"></a>; this section will simply show a few examples of in-text equations in context. Notice how this equation: 
 
       lim<sub><math><mi>n</mi></math>&rarr;&infin;</sub>
 
@@ -270,9 +270,9 @@
 
       <h2>Citations</h2>
 
-      <p>Citations to articles <cites><cite href="#bowman93"></cite><cite href="#braams91"></cite><cite href="#clark91"></cite><cite href="#herlihy93"></cite></cites>, conference proceedings <cite href="#clark91"></cite> or books <cites><cite href="#salas78"></cite><cite href="#lamport86"></cite></cites> listed in the Bibliography section of your article will occur throughout the text of your article. You should use BibTeX to automatically produce this bibliography; you simply need to insert one of several citation commands with a key of the item cited in the proper location in the <code>.tex</code> file <cite href="#lamport86"></cite>. The key is a short reference you invent to uniquely identify each work; in this sample document, the key is the first author’s surname and a word from the title. This identifying key is included with each item in the <code>.bib</code> file for your article.</p>
+      <p>Citations to articles <cites><a href="#bowman93"></a><a href="#braams91"></a><a href="#clark91"></a><a href="#herlihy93"></a></cites>, conference proceedings <a href="#clark91"></a> or books <cites><a href="#salas78"></a><a href="#lamport86"></a></cites> listed in the Bibliography section of your article will occur throughout the text of your article. You should use BibTeX to automatically produce this bibliography; you simply need to insert one of several citation commands with a key of the item cited in the proper location in the <code>.tex</code> file <a href="#lamport86"></a>. The key is a short reference you invent to uniquely identify each work; in this sample document, the key is the first author’s surname and a word from the title. This identifying key is included with each item in the <code>.bib</code> file for your article.</p>
 
-      <p>The details of the construction of the <code>.bib</code> file are beyond the scope of this sample document, but more information can be found in the <em>Author’s Guide</em>, and exhaustive details in the <em><span class="latex">L<span>a</span>T<span>e</span>X</span> User’s Guide</em><cite href="#lamport86"></cite>.</p>
+      <p>The details of the construction of the <code>.bib</code> file are beyond the scope of this sample document, but more information can be found in the <em>Author’s Guide</em>, and exhaustive details in the <em><span class="latex">L<span>a</span>T<span>e</span>X</span> User’s Guide</em><a href="#lamport86"></a>.</p>
 
       <p>This article shows only the plainest form of the citation command, using <code>\cite</code>. This is what is stipulated in the SIGS style specifications. No other citation format is endorsed.</p>
 
@@ -280,7 +280,7 @@
 
       <p>Because tables cannot be split across pages, the best placement for them is typically the top of the page nearest their initial cite. To ensure this proper <q>floating</q> placement of tables, use the environment <strong>table</strong> to enclose the table’s contents and the table caption. The contents of the table itself must go in the <strong>tabular</strong> environment, to be aligned properly in rows and columns, with the desired horizontal and vertical rules. Again, detailed instructions on <strong>tabular</strong> material is found in the <em><span class="latex">L<span>a</span>T<span>e</span>X</span> User’s Guide</em>.</p>
 
-      <p>Immediately following this sentence is the point at which <cite href="#tablefreq" class="table"></cite> is included in the input file; compare the placement of the table here with the table in the printed dvi output of this document.</p>
+      <p>Immediately following this sentence is the point at which <a href="#tablefreq" class="table"></a> is included in the input file; compare the placement of the table here with the table in the printed dvi output of this document.</p>
 
       <table id="tablefreq">
         <caption>Frequency of Special Characters</caption>
@@ -587,7 +587,7 @@
         <p>which contradicts our assumption that <math><mi>l</mi><mo>&ne;</mo><mn>0</mn></math>.</p>
       </div>
 
-      <p>Complete rules about using these environments and using the two different creation commands are in the <em>Author’s Guide</em>; please consult it for more detailed instructions. If you need to use another construct, not listed therein, which you want to have the same formatting as the Theorem or the Definition<cite href="#salas78"></cite> shown above, use the <code>\newtheorem</code> or the <code>\newdef</code> command, respectively, to create it.</p>
+      <p>Complete rules about using these environments and using the two different creation commands are in the <em>Author’s Guide</em>; please consult it for more detailed instructions. If you need to use another construct, not listed therein, which you want to have the same formatting as the Theorem or the Definition<a href="#salas78"></a> shown above, use the <code>\newtheorem</code> or the <code>\newdef</code> command, respectively, to create it.</p>
 
       <table class="table-comments">
         <caption>Some Typical Commands</caption>
@@ -651,19 +651,19 @@
     <section>
       <h1>References</h1>
 
-      <ref id="bowman93">Bowman, M., Debray, S. K., and Peterson, L. L. 1993. Reasoning about naming systems. <em>ACM Trans. Program. Lang. Syst.</em> 15, 5 (Nov. 1993), 795-825.</ref>
+      <cite id="bowman93">Bowman, M., Debray, S. K., and Peterson, L. L. 1993. Reasoning about naming systems. <em>ACM Trans. Program. Lang. Syst.</em> 15, 5 (Nov. 1993), 795-825.</cite>
 
-      <ref id="braams91">J. Braams. Babel, a multilingual style-option system for use with <span class="latex">L<span>a</span>T<span>e</span>X</span>’s standard document styles. <em>TUGboat</em>, 12(2):291–301, June 1991.</ref>
+      <cite id="braams91">J. Braams. Babel, a multilingual style-option system for use with <span class="latex">L<span>a</span>T<span>e</span>X</span>’s standard document styles. <em>TUGboat</em>, 12(2):291–301, June 1991.</cite>
 
-      <ref id="clark91">M. Clark. Post congress tristesse. In <em>TeX90 Conference Proceedings</em>, pages 84–89. TeX Users Group, March 1991.</ref>
+      <cite id="clark91">M. Clark. Post congress tristesse. In <em>TeX90 Conference Proceedings</em>, pages 84–89. TeX Users Group, March 1991.</cite>
 
-      <ref id="herlihy93">M. Herlihy. A methodology for implementing highly concurrent data objects. <em>ACM Trans. Program. Lang. Syst.</em>, 15(5):745–770, November 1993.</ref>
+      <cite id="herlihy93">M. Herlihy. A methodology for implementing highly concurrent data objects. <em>ACM Trans. Program. Lang. Syst.</em>, 15(5):745–770, November 1993.</cite>
 
-      <ref id="lamport86">L. Lamport. <em>LaTeX User’s Guide and Document Reference Manual</em>. Addison-Wesley Publishing Company, Reading, Massachusetts, 1986.</ref>
+      <cite id="lamport86">L. Lamport. <em>LaTeX User’s Guide and Document Reference Manual</em>. Addison-Wesley Publishing Company, Reading, Massachusetts, 1986.</cite>
 
-      <ref id="salas78">S. Salas and E. Hille. <em>Calculus: One and Several Variable</em>. John Wiley and Sons, New York, 1978.</ref>
+      <cite id="salas78">S. Salas and E. Hille. <em>Calculus: One and Several Variable</em>. John Wiley and Sons, New York, 1978.</cite>
 
-      <ref id="park13">Park, T. H., Saxena, A., Jagannath, S., Wiedenbeck, S., and Forte, A. 2013. Towards a taxonomy of errors in HTML and CSS. In <em>Proceedings of the ACM International Computing Education Research Conference</em> (San Diego, USA, August 12 - 14, 2013). ICER '13. ACM, New York, NY, 75-82.</ref>
+      <cite id="park13">Park, T. H., Saxena, A., Jagannath, S., Wiedenbeck, S., and Forte, A. 2013. Towards a taxonomy of errors in HTML and CSS. In <em>Proceedings of the ACM International Computing Education Research Conference</em> (San Diego, USA, August 12 - 14, 2013). ICER '13. ACM, New York, NY, 75-82.</cite>
       
     </section>
 
