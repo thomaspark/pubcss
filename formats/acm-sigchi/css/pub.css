@@ -147,6 +147,7 @@ cite {
   font-style: normal;
 }
 @page {
+  
 }
 body > :first-child {
   counter-reset: page 1;

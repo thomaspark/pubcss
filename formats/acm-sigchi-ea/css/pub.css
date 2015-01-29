@@ -147,6 +147,7 @@ cite {
   font-style: normal;
 }
 @page {
+  
 }
 body > :first-child {
   counter-reset: page 1;
@@ -433,6 +434,6 @@ aside {
   left: 0;
   float: left;
   width: 2in;
-  margin-left: -2.2083333333333335in;
+  margin-left: -2.20833333in;
   page-break-inside: avoid;
 }

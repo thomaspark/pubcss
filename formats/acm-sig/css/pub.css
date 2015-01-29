@@ -56,22 +56,22 @@ h6:not(.counter-skip):before {
   margin-right: 0.5em;
 }
 h1 {
-  font-size: 1.3333333333333333em;
+  font-size: 1.33333333em;
 }
 h2 {
-  font-size: 1.3333333333333333em;
+  font-size: 1.33333333em;
 }
 h3 {
-  font-size: 1.2222222222222223em;
+  font-size: 1.22222222em;
 }
 h4 {
-  font-size: 1.2222222222222223em;
+  font-size: 1.22222222em;
 }
 h5 {
-  font-size: 1.2222222222222223em;
+  font-size: 1.22222222em;
 }
 h6 {
-  font-size: 1.2222222222222223em;
+  font-size: 1.22222222em;
 }
 p {
   margin: 0 0 0.5em;
@@ -79,11 +79,11 @@ p {
   text-indent: 0;
 }
 small {
-  font-size: 0.7777777777777778em;
+  font-size: 0.77777778em;
 }
 code {
   font-family: Courier, monospace;
-  font-size: 0.8888888888888888em;
+  font-size: 0.88888889em;
   font-weight: 400;
   white-space: nowrap;
 }
@@ -155,6 +155,7 @@ cite {
   font-style: normal;
 }
 @page {
+  
 }
 body > :first-child {
   counter-reset: page 1;
@@ -366,7 +367,7 @@ ref:before {
 }
 h1,
 h2 {
-  margin: 1.3333333333333333em 0 0 0;
+  margin: 1.33333333em 0 0 0;
 }
 h1 {
   text-transform: uppercase;
@@ -380,7 +381,7 @@ h1 + * > h2:first-child {
 }
 h3,
 h4 {
-  margin: 1.3333333333333333em 0 0 0;
+  margin: 1.33333333em 0 0 0;
   font-style: italic;
   font-weight: normal;
 }
