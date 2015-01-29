@@ -238,10 +238,10 @@ a[href^="#"].table:before {
 a[href^="#"].table:after {
   content: "";
 }
-cites > :not(:first-child):before {
+.cites > :not(:first-child):before {
   content: none;
 }
-cites > :not(:last-child):after {
+.cites > :not(:last-child):after {
   content: ", ";
 }
 cite {
