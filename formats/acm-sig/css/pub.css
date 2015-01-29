@@ -445,11 +445,11 @@ header h2 {
   bottom: 0;
   width: 3.333in;
 }
-ref {
+cite {
   margin-bottom: 0.333em;
   text-align: left;
 }
-ref a {
+cite a {
   text-decoration: none;
 }
 .appendix {

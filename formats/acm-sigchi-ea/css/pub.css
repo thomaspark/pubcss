@@ -428,7 +428,7 @@ figcaption:before {
 .footnote::footnote-marker {
   font-size: 7.5pt;
 }
-ref {
+cite {
   margin-bottom: 4pt;
 }
 aside {
