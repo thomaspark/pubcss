@@ -20,7 +20,7 @@ body {
   -moz-column-gap: 0.5in;
   column-gap: 0.5in;
 }
-footnote {
+.footnote {
   float: prince-column-footnote;
 }
 caption {
@@ -113,16 +113,16 @@ figure {
 figcaption {
   font-weight: normal;
 }
-footnote {
+.footnote {
   margin-left: 0.333em;
   padding-left: 0.667em;
 }
-footnote::footnote-call {
+.footnote::footnote-call {
   vertical-align: super;
   line-height: none;
   font-size: 66%;
 }
-footnote::footnote-marker {
+.footnote::footnote-marker {
   font-size: 66%;
   footnote-style-position: inside;
 }
@@ -166,13 +166,13 @@ figure {
 figcaption:before {
   content: "Figure " counter(figure) ". ";
 }
-footnote {
+.footnote {
   counter-increment: footnote;
 }
-footnote::footnote-call {
+.footnote::footnote-call {
   content: counter(footnote);
 }
-footnote::footnote-marker {
+.footnote::footnote-marker {
   content: counter(footnote);
 }
 a[href^="#"] {
@@ -420,12 +420,12 @@ figcaption:before {
   column-break-before: always;
   margin-bottom: 11.5pt;
 }
-footnote {
+.footnote {
   margin-left: 3pt;
   padding-left: 6pt;
   font-size: 7.5pt;
 }
-footnote::footnote-marker {
+.footnote::footnote-marker {
   font-size: 7.5pt;
 }
 ref {
