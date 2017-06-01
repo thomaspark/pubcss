@@ -1,0 +1,40 @@
+@mixin generate-counter-increments($i: 1) {
+  @if $i < 7 {
+    h#{$i}:not(.counter-skip) {
+      $counter-increment: "counter-h#{$i}";
+      counter-increment: $counter-increment;
+    }
+
+    @include generate-counter-increments($i + 1);
+  }
+}
+
+@mixin generate-counter-resets($i: 1) {
+  @if $i < 7 {
+    h#{$i}.counter-reset {
+      $counter-reset: "counter-h#{$i}";
+      counter-reset: $counter-reset;
+    }
+
+    @include generate-counter-resets($i + 1);
+  }
+}
+
+@mixin generate-counter-content($i: 1, $s: '', $p: '') {
+  @if $i < 7 {
+  $parent: "#{$p}";
+  $counter: "counter-h#{$i}";
+  $counter-value: #{$counter};
+  $counter-style: "counter-h#{$i}-style";
+  $counter-style-value: #{$counter-style};
+  $string: "#{$s} counter(#{$counter-value}, #{$counter-style-value}) '#{$counter-header-separator}'";
+  $content: $counter-header-prefix"#{$s} counter(#{$counter-value}, #{$counter-style-value})"$counter-header-suffix;
+
+    #{$parent} h#{$i}:not(.counter-skip)::before {
+      content: $content;
+    }
+
+    @include generate-counter-content($i + 1, $string, $parent);
+
+  }
+}

@@ -1,0 +1,15 @@
+@mixin page-number() {
+  @if $page-number-enabled {
+    #{$at}#{$page-number-position} {
+      content: counter(page, $page-number-style);
+      font-size: $font-size-page-number;
+    }
+  }
+}
+
+@page {
+  @include footnotes();
+  @include page-number();
+  size: $page-width $page-height;
+  margin: $page-margin;
+}
