@@ -71,12 +71,14 @@ $counter-h4: subsubsection;
 $counter-h5: subsubsubsection;
 $counter-h6: subsubsubsubsection;
 
-$counter-h1-style: upper-roman;
-$counter-h2-style: upper-alpha;
-$counter-h3-style: decimal;
-$counter-h4-style: lower-alpha;
-$counter-h5-style: $counter-h1-style;
-$counter-h6-style: $counter-h1-style;
+$counter-styles:
+  '',
+  upper-roman,
+  upper-alpha,
+  decimal,
+  lower-alpha
+  upper-roman,
+  upper-roman;
 
 $counter-header-prefix: "";
 $counter-header-suffix: ".";

@@ -71,12 +71,14 @@ $counter-h4: subsubsection;
 $counter-h5: subsubsubsection;
 $counter-h6: subsubsubsubsection;
 
-$counter-h1-style: decimal;
-$counter-h2-style: $counter-h1-style;
-$counter-h3-style: $counter-h1-style;
-$counter-h4-style: $counter-h1-style;
-$counter-h5-style: $counter-h1-style;
-$counter-h6-style: $counter-h1-style;
+$counter-styles:
+  '',
+  decimal,
+  decimal,
+  decimal,
+  decimal,
+  decimal,
+  decimal;
 
 $counter-header-prefix: "";
 $counter-header-suffix: "";

@@ -219,22 +219,22 @@ td {
   margin-right: 0 !important; }
 
 h1:not(.counter-skip) {
-  counter-increment: "counter-h1"; }
+  counter-increment: counter-h1; }
 
 h2:not(.counter-skip) {
-  counter-increment: "counter-h2"; }
+  counter-increment: counter-h2; }
 
 h3:not(.counter-skip) {
-  counter-increment: "counter-h3"; }
+  counter-increment: counter-h3; }
 
 h4:not(.counter-skip) {
-  counter-increment: "counter-h4"; }
+  counter-increment: counter-h4; }
 
 h5:not(.counter-skip) {
-  counter-increment: "counter-h5"; }
+  counter-increment: counter-h5; }
 
 h6:not(.counter-skip) {
-  counter-increment: "counter-h6"; }
+  counter-increment: counter-h6; }
 
 h1.counter-reset {
   counter-reset: "counter-h1"; }
@@ -255,22 +255,22 @@ h6.counter-reset {
   counter-reset: "counter-h6"; }
 
 h1:not(.counter-skip)::before {
-  content: "" " counter(counter-h1, counter-h1-style)" "."; }
+  content: " " counter(counter-h1, "") ". ."; }
 
 h2:not(.counter-skip)::before {
-  content: "" " counter(counter-h1, counter-h1-style) '.' counter(counter-h2, counter-h2-style)" "."; }
+  content: '   counter(counter-h1, "") . .' counter(counter-h2, upper-roman) ". ."; }
 
 h3:not(.counter-skip)::before {
-  content: "" " counter(counter-h1, counter-h1-style) '.' counter(counter-h2, counter-h2-style) '.' counter(counter-h3, counter-h3-style)" "."; }
+  content: '    counter(counter-h1, "") . . counter(counter-h2, upper-roman) . .' counter(counter-h3, upper-alpha) ". ."; }
 
 h4:not(.counter-skip)::before {
-  content: "" " counter(counter-h1, counter-h1-style) '.' counter(counter-h2, counter-h2-style) '.' counter(counter-h3, counter-h3-style) '.' counter(counter-h4, counter-h4-style)" "."; }
+  content: '     counter(counter-h1, "") . . counter(counter-h2, upper-roman) . . counter(counter-h3, upper-alpha) . .' counter(counter-h4, decimal) ". ."; }
 
 h5:not(.counter-skip)::before {
-  content: "" " counter(counter-h1, counter-h1-style) '.' counter(counter-h2, counter-h2-style) '.' counter(counter-h3, counter-h3-style) '.' counter(counter-h4, counter-h4-style) '.' counter(counter-h5, counter-h5-style)" "."; }
+  content: '      counter(counter-h1, "") . . counter(counter-h2, upper-roman) . . counter(counter-h3, upper-alpha) . . counter(counter-h4, decimal) . .' counter(counter-h5, lower-alpha upper-roman) ". ."; }
 
 h6:not(.counter-skip)::before {
-  content: "" " counter(counter-h1, counter-h1-style) '.' counter(counter-h2, counter-h2-style) '.' counter(counter-h3, counter-h3-style) '.' counter(counter-h4, counter-h4-style) '.' counter(counter-h5, counter-h5-style) '.' counter(counter-h6, counter-h6-style)" "."; }
+  content: '       counter(counter-h1, "") . . counter(counter-h2, upper-roman) . . counter(counter-h3, upper-alpha) . . counter(counter-h4, decimal) . . counter(counter-h5, lower-alpha upper-roman) . .' counter(counter-h6, upper-roman) ". ."; }
 
 .page-break-after {
   break-after: always; }

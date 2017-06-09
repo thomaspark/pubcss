@@ -1,7 +1,7 @@
 @mixin generate-counter-increments($i: 1) {
   @if $i < 7 {
     h#{$i}:not(.counter-skip) {
-      $counter-increment: "counter-h#{$i}";
+      $counter-increment: unquote("counter-h#{$i}");
       counter-increment: $counter-increment;
     }
 
@@ -20,18 +20,16 @@
   }
 }
 
+//https://stackoverflow.com/questions/8533432/creating-or-referencing-variables-dynamically-in-sass
 @mixin generate-counter-content($i: 1, $s: '', $p: '') {
   @if $i < 7 {
-  $parent: "#{$p}";
-  $counter: "counter-h#{$i}";
-  $counter-value: #{$counter};
-  $counter-style: "counter-h#{$i}-style";
-  $counter-style-value: #{$counter-style};
-  $string: "#{$s} counter(#{$counter-value}, #{$counter-style-value}) '#{$counter-header-separator}'";
-  $content: $counter-header-prefix"#{$s} counter(#{$counter-value}, #{$counter-style-value})"$counter-header-suffix;
+    $parent: "#{$p}";
+    $counter: "counter-h#{$i}";
+    $string: "#{$counter-header-prefix} #{$s}" counter(#{$counter}, nth($counter-styles, $i)) "#{$counter-header-separator} #{$counter-header-suffix}";
+    $content: #{$s} counter(#{$counter}, nth($counter-styles, $i));
 
     #{$parent} h#{$i}:not(.counter-skip)::before {
-      content: $content;
+      content: $string;
     }
 
     @include generate-counter-content($i + 1, $string, $parent);

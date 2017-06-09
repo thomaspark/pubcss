@@ -31,12 +31,12 @@ $font-family-monospace: Courier, monospace;
 $font-family-base: $font-family-serif;
 
 $font-size-base: 9pt;
-$font-size-small: #{7 / 9}em;
-$font-size-code: #{8 / 9}em;
+$font-size-small: (7 / 9)em;
+$font-size-code: (8 / 9)em;
 
-$font-size-h1: #{12 / 9}em;
+$font-size-h1: (12 / 9)em;
 $font-size-h2: $font-size-h1;
-$font-size-h3: #{11 / 9}em;
+$font-size-h3: (11 / 9)em;
 $font-size-h4: $font-size-h3;
 $font-size-h5: $font-size-h3;
 $font-size-h6: $font-size-h3;
@@ -71,12 +71,14 @@ $counter-h4: subsubsection;
 $counter-h5: subsubsubsection;
 $counter-h6: subsubsubsubsection;
 
-$counter-h1-style: decimal;
-$counter-h2-style: $counter-h1-style;
-$counter-h3-style: $counter-h1-style;
-$counter-h4-style: $counter-h1-style;
-$counter-h5-style: $counter-h1-style;
-$counter-h6-style: $counter-h1-style;
+$counter-styles:
+  '',
+  decimal, //h1
+  decimal, //h2
+  decimal, //h3
+  decimal, //h4
+  decimal, //h5
+  decimal; //h6
 
 $counter-header-prefix: "";
 $counter-header-suffix: "";
