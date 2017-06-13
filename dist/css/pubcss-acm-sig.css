@@ -237,40 +237,40 @@ h6:not(.counter-skip) {
   counter-increment: counter-h6; }
 
 h1.counter-reset {
-  counter-reset: "counter-h1"; }
+  counter-reset: counter-h1; }
 
 h2.counter-reset {
-  counter-reset: "counter-h2"; }
+  counter-reset: counter-h2; }
 
 h3.counter-reset {
-  counter-reset: "counter-h3"; }
+  counter-reset: counter-h3; }
 
 h4.counter-reset {
-  counter-reset: "counter-h4"; }
+  counter-reset: counter-h4; }
 
 h5.counter-reset {
-  counter-reset: "counter-h5"; }
+  counter-reset: counter-h5; }
 
 h6.counter-reset {
-  counter-reset: "counter-h6"; }
+  counter-reset: counter-h6; }
 
 h1:not(.counter-skip)::before {
-  content: " " counter(counter-h1, "") ". "; }
+  content: "" "" counter(section, decimal) ""; }
 
 h2:not(.counter-skip)::before {
-  content: '   counter(counter-h1, "") . ' counter(counter-h2, decimal) ". "; }
+  content: "" "" counter(section, decimal) "." counter(subsection, decimal) ""; }
 
 h3:not(.counter-skip)::before {
-  content: '    counter(counter-h1, "") .  counter(counter-h2, decimal) . ' counter(counter-h3, decimal) ". "; }
+  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) ""; }
 
 h4:not(.counter-skip)::before {
-  content: '     counter(counter-h1, "") .  counter(counter-h2, decimal) .  counter(counter-h3, decimal) . ' counter(counter-h4, decimal) ". "; }
+  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsection, decimal) ""; }
 
 h5:not(.counter-skip)::before {
-  content: '      counter(counter-h1, "") .  counter(counter-h2, decimal) .  counter(counter-h3, decimal) .  counter(counter-h4, decimal) . ' counter(counter-h5, decimal) ". "; }
+  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsubsection, decimal) ""; }
 
 h6:not(.counter-skip)::before {
-  content: '       counter(counter-h1, "") .  counter(counter-h2, decimal) .  counter(counter-h3, decimal) .  counter(counter-h4, decimal) .  counter(counter-h5, decimal) . ' counter(counter-h6, decimal) ". "; }
+  content: "" "" counter(section, decimal) "." counter(subsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsection, decimal) "." counter(subsubsubsection, decimal) "." counter(subsubsubsubsection, decimal) ""; }
 
 .page-break-after {
   break-after: always; }

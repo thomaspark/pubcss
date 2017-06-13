@@ -14,7 +14,7 @@ h1 {
 }
 
 h1:not(.counter-skip)::before {
-  content: $counter-header-prefix counter($counter-h1) $counter-header-separator;
+  content: $counter-header-prefix counter(section) $counter-header-separator;
 }
 
 h1 + h2,

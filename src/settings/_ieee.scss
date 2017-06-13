@@ -64,21 +64,21 @@ $page-number-style: decimal;
 $page-number-start: 1;
 
 $header-counter-enabled: true;
-$counter-h1: section;
-$counter-h2: subsection;
-$counter-h3: subsubsection;
-$counter-h4: subsubsection;
-$counter-h5: subsubsubsection;
-$counter-h6: subsubsubsubsection;
+$counter-ids:
+  'section',
+  'subsection',
+  'subsubsection',
+  'subsubsection',
+  'subsubsubsection',
+  'subsubsubsubsection';
 
 $counter-styles:
-  '',
-  upper-roman,
-  upper-alpha,
-  decimal,
-  lower-alpha
-  upper-roman,
-  upper-roman;
+  'upper-roman',//h1
+  'upper-alpha',//h2
+  'decimal',//h3
+  'lower-alpha',//h4
+  'upper-roman',//h5
+  'upper-roman';//h6
 
 $counter-header-prefix: "";
 $counter-header-suffix: ".";

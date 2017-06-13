@@ -49,7 +49,7 @@ h5 {
 }
 
 h2:not(.counter-skip)::before {
-  content: $counter-header-prefix counter($counter-h2, upper-alpha) $counter-header-suffix;
+  content: $counter-header-prefix counter(subsection, upper-alpha) $counter-header-suffix;
 }
 
 h5:not(.counter-skip)::before {

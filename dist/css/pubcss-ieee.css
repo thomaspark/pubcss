@@ -237,40 +237,40 @@ h6:not(.counter-skip) {
   counter-increment: counter-h6; }
 
 h1.counter-reset {
-  counter-reset: "counter-h1"; }
+  counter-reset: counter-h1; }
 
 h2.counter-reset {
-  counter-reset: "counter-h2"; }
+  counter-reset: counter-h2; }
 
 h3.counter-reset {
-  counter-reset: "counter-h3"; }
+  counter-reset: counter-h3; }
 
 h4.counter-reset {
-  counter-reset: "counter-h4"; }
+  counter-reset: counter-h4; }
 
 h5.counter-reset {
-  counter-reset: "counter-h5"; }
+  counter-reset: counter-h5; }
 
 h6.counter-reset {
-  counter-reset: "counter-h6"; }
+  counter-reset: counter-h6; }
 
 h1:not(.counter-skip)::before {
-  content: " " counter(counter-h1, "") ". ."; }
+  content: "" "" counter(section, upper-roman) "."; }
 
 h2:not(.counter-skip)::before {
-  content: '   counter(counter-h1, "") . .' counter(counter-h2, upper-roman) ". ."; }
+  content: "" "" counter(section, upper-roman) "." counter(subsection, upper-alpha) "."; }
 
 h3:not(.counter-skip)::before {
-  content: '    counter(counter-h1, "") . . counter(counter-h2, upper-roman) . .' counter(counter-h3, upper-alpha) ". ."; }
+  content: "" "" counter(section, upper-roman) "." counter(subsection, upper-alpha) "." counter(subsubsection, decimal) "."; }
 
 h4:not(.counter-skip)::before {
-  content: '     counter(counter-h1, "") . . counter(counter-h2, upper-roman) . . counter(counter-h3, upper-alpha) . .' counter(counter-h4, decimal) ". ."; }
+  content: "" "" counter(section, upper-roman) "." counter(subsection, upper-alpha) "." counter(subsubsection, decimal) "." counter(subsubsection, lower-alpha) "."; }
 
 h5:not(.counter-skip)::before {
-  content: '      counter(counter-h1, "") . . counter(counter-h2, upper-roman) . . counter(counter-h3, upper-alpha) . . counter(counter-h4, decimal) . .' counter(counter-h5, lower-alpha upper-roman) ". ."; }
+  content: "" "" counter(section, upper-roman) "." counter(subsection, upper-alpha) "." counter(subsubsection, decimal) "." counter(subsubsection, lower-alpha) "." counter(subsubsubsection, upper-roman) "."; }
 
 h6:not(.counter-skip)::before {
-  content: '       counter(counter-h1, "") . . counter(counter-h2, upper-roman) . . counter(counter-h3, upper-alpha) . . counter(counter-h4, decimal) . . counter(counter-h5, lower-alpha upper-roman) . .' counter(counter-h6, upper-roman) ". ."; }
+  content: "" "" counter(section, upper-roman) "." counter(subsection, upper-alpha) "." counter(subsubsection, decimal) "." counter(subsubsection, lower-alpha) "." counter(subsubsubsection, upper-roman) "." counter(subsubsubsubsection, upper-roman) "."; }
 
 .page-break-after {
   break-after: always; }
