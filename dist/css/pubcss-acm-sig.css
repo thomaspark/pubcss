@@ -219,40 +219,40 @@ td {
   margin-right: 0 !important; }
 
 h1:not(.counter-skip) {
-  counter-increment: counter-h1; }
+  counter-increment: section; }
 
 h2:not(.counter-skip) {
-  counter-increment: counter-h2; }
+  counter-increment: subsection; }
 
 h3:not(.counter-skip) {
-  counter-increment: counter-h3; }
+  counter-increment: subsubsection; }
 
 h4:not(.counter-skip) {
-  counter-increment: counter-h4; }
+  counter-increment: subsubsection; }
 
 h5:not(.counter-skip) {
-  counter-increment: counter-h5; }
+  counter-increment: subsubsubsection; }
 
 h6:not(.counter-skip) {
-  counter-increment: counter-h6; }
+  counter-increment: subsubsubsubsection; }
 
 h1.counter-reset {
-  counter-reset: counter-h1; }
+  counter-increment: section; }
 
 h2.counter-reset {
-  counter-reset: counter-h2; }
+  counter-increment: subsection; }
 
 h3.counter-reset {
-  counter-reset: counter-h3; }
+  counter-increment: subsubsection; }
 
 h4.counter-reset {
-  counter-reset: counter-h4; }
+  counter-increment: subsubsection; }
 
 h5.counter-reset {
-  counter-reset: counter-h5; }
+  counter-increment: subsubsubsection; }
 
 h6.counter-reset {
-  counter-reset: counter-h6; }
+  counter-increment: subsubsubsubsection; }
 
 h1:not(.counter-skip)::before {
   content: "" "" counter(section, decimal) ""; }
