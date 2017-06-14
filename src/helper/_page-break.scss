@@ -1,0 +1,7 @@
+.page-break-after {
+  @include page-break-after(always)
+}
+
+.page-break-before {
+  @include page-break-before(always);
+}
