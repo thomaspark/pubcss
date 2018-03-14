@@ -110,10 +110,10 @@ gulp.task('reload', () => {
 gulp.task('watch', () => {
   // Watch for updated files in the dist folder and trigger browserSync to
   // refresh.
-  gulp.watch(`${setting.folder.dist}**/*.*`, ['reload']);
+  gulp.watch(`${setting.folder.dist}**/*.{css,html,png,gif,jpg,jpeg,svg,bmp}`, ['reload']);
   // Watch for changes in source folder and build file
-  gulp.watch(`${setting.folder.src}**/*.scss`, ['css']);
-  gulp.watch(`${setting.folder.src}**/*.html`, ['html']);
+  gulp.watch(`${setting.folder.src}**/*.scss`, ['css', 'pdf']);
+  gulp.watch(`${setting.folder.src}**/*.html`, ['html', 'pdf']);
 });
 
 ////////////////////////////////////////////////////////////////////////////////
