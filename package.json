@@ -1,10 +1,12 @@
 {
   "name": "pubcss",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Publish papers like it's HTML5.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx gulp build",
+    "develop": "npx gulp develop",
+    "start": "npx gulp"
   },
   "repository": {
     "type": "git",
@@ -23,12 +25,13 @@
     "url": "https://github.com/cbleslie/pubcss/issues"
   },
   "homepage": "https://github.com/cbleslie/pubcss#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.23.5",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-sass": "^3.1.0"
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.7.2"
   }
 }
