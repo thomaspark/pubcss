@@ -7,7 +7,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
 // PDFs
-const puppeteerPdf = require('./puppeteer-pdf.js');
+const puppeteerPdf = require('./gulp-puppeteer-pdf.js');
 
 ////////////////////////////////////////////////////////////////////////////////
 // Settings
