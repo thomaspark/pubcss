@@ -141,7 +141,7 @@ Build should be run with 'npm run [command]'
 Options:
 
 'npm run build'
-    Builds project with no developer features
+    Builds documents, and generates PDF.
 
 'npm run develop'
     Watches and builds
