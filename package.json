@@ -32,6 +32,7 @@
     "gulp-autoprefixer": "^4.1.0",
     "gulp-clean-css": "^3.9.2",
     "gulp-sass": "^3.1.0",
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.7.2",
+    "puppeteer": "^1.1.1"
   }
 }

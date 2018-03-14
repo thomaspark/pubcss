@@ -6,6 +6,8 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
+// PDFs
+const puppeteerPdf = require('./puppeteer-pdf.js');
 
 ////////////////////////////////////////////////////////////////////////////////
 // Settings
@@ -29,11 +31,21 @@ const setting = {
     cascade: true
   },
 
+  //PDF
+  pdf: {
+    format: 'Letter',
+    margin: {
+      top: '1cm',
+      right: '1cm',
+      bottom: '1cm',
+      left: '1cm'
+    }
+  },
   // BrowserSync
   browserSync: {
     server: {
         baseDir: "./dist/",
-        directory: false
+        directory: true
     },
     ghostMode: {
       clicks: true,
@@ -55,7 +67,7 @@ gulp.task('html', () => {
 });
 
 // Images
-gulp.task('html', () => {
+gulp.task('images', () => {
   gulp.src(`${setting.folder.src}**/*.{png,gif,jpg,jpeg,svg,bmp}`)
     // Write to Dist Folder
     .pipe(gulp.dest(setting.folder.dist));
@@ -71,7 +83,13 @@ gulp.task('css', () => {
     // Minify CSS
     .pipe(cleanCss())
     // Writing to Dist folder
-    .pipe(gulp.dest(`${setting.folder.dist}css/`));
+    .pipe(gulp.dest(`${setting.folder.dist}`));
+});
+
+// PDF
+gulp.task('pdf', () => {
+  gulp.src(`${setting.folder.dist}**/*.html`)
+    .pipe(puppeteerPdf(setting.pdf));
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -90,7 +108,8 @@ gulp.task('reload', () => {
 
 // Watch
 gulp.task('watch', () => {
-  // Watch for updated files in the dist folder and reload
+  // Watch for updated files in the dist folder and trigger browserSync to
+  // refresh.
   gulp.watch(`${setting.folder.dist}**/*.*`, ['reload']);
   // Watch for changes in source folder and build file
   gulp.watch(`${setting.folder.src}**/*.scss`, ['css']);
@@ -102,7 +121,9 @@ gulp.task('watch', () => {
 ////////////////////////////////////////////////////////////////////////////////
 
 // Build
-gulp.task('build', ['html', 'css']);
+gulp.task('build', ['html', 'images', 'css', 'pdf']);
+// PDF must come last, becasue it's dependent on Final HTML/CSS actually
+// exsisting.
 
 // Develop
 gulp.task('develop', ['build', 'serve', 'watch']);
