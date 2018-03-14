@@ -114,6 +114,7 @@ gulp.task('watch', () => {
   // Watch for changes in source folder and build file
   gulp.watch(`${setting.folder.src}**/*.scss`, ['css', 'pdf']);
   gulp.watch(`${setting.folder.src}**/*.html`, ['html', 'pdf']);
+  gulp.watch(`${setting.folder.src}**/*.{png,gif,jpg,jpeg,svg,bmp}`, ['images', 'pdf']);
 });
 
 ////////////////////////////////////////////////////////////////////////////////
