@@ -4,16 +4,18 @@ const through = require('through2');
 const puppeteer = require('puppeteer');
 
 module.exports = (options) => through.obj((file, enc, cb) => {
-  //A general function to save the PDF.
+  // A general function to save the PDF.
   const makePdf = async (file) => {
     // Made PDF paths.
     const pdfPath = gutil.replaceExtension(file.path, '.pdf');
-    // Turn on Chrome
+    // Spinup headless chrome instance
     const browser = await puppeteer.launch();
     // Make a new page!
     const page = await browser.newPage();
-    // In the new page, go to the file.
-    await page.goto(`file://${file.path}`, {waitUntil: 'networkidle2'});
+    // In the new page, go to the file!
+    await page.goto(`file://${file.path}`, {
+      waitUntil: 'networkidle2'
+    });
     //PDF the crap out of that page.
     await page.pdf({
       // Grab it from the File System
