@@ -41,7 +41,7 @@ Figures and tables are also numbered if you include a caption.
 
 ```html
 <table>
-  <tr><td>1</td><td><2<td></tr>
+  <tr><td>1</td><td>2</td></tr>
   <caption>Example Table</caption>
 <table>
 
