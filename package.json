@@ -23,8 +23,7 @@
     "url": "https://github.com/cbleslie/pubcss/issues"
   },
   "homepage": "https://github.com/cbleslie/pubcss#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
