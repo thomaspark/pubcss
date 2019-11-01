@@ -167,7 +167,7 @@ td {
     footnote-style-position: inside; }
 
 @page {
-  escape("@")footnotes {
+  @footnotes {
     border-top: 0.5px solid #000;
     columns: 2;
     margin-top: 2em;
