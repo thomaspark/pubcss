@@ -1,6 +1,6 @@
 @mixin page-number() {
   @if $page-number-enabled {
-    #{$at}#{$page-number-position} {
+    \@#{$page-number-position} {
       content: counter(page, $page-number-style);
       font-size: $font-size-page-number;
     }
