@@ -22,7 +22,7 @@ The only dependency is [Prince](http://www.princexml.com/), which is free for no
 
 ## Reference
 
-### Sections
+### About Sections
 
 Sections and subsections are automatically numbered by following this pattern.
 
@@ -35,7 +35,7 @@ Sections and subsections are automatically numbered by following this pattern.
 </section>
 ```
 
-### Tables and Figures
+### About Tables and Figures
 
 Figures and tables are also numbered if you include a caption.
 
@@ -51,7 +51,7 @@ Figures and tables are also numbered if you include a caption.
 </figure>
 ```
 
-### References and Citations
+### About References and Citations
 
 References are also numbered. Be sure to assign them unique IDs.
 
@@ -79,7 +79,7 @@ Sections, tables, and figures can also be referenced by adding a class.
 <a href="#example-figure" class="figure"></a>
 ```
 
-### Equations
+### About Equations
 
 Equations are also numbered. MathML is well-supported by Prince. For the web, you’ll need [MathJax](http://www.mathjax.org/) to render MathML properly in Chrome and Internet Explorer.
 
@@ -97,7 +97,7 @@ Equations are also numbered. MathML is well-supported by Prince. For the web, yo
 </div>
 ```
 
-### Footnotes
+### About Footnotes
 
 Footnotes are made within the body text, and are automatically moved to the bottom of the current page.
 
@@ -105,7 +105,7 @@ Footnotes are made within the body text, and are automatically moved to the bott
 <p>This is text.<span class="footnote">And this is a footnote.</span></p>
 ```
 
-### Smart Quotes
+### About Smart Quotes
 
 Smart quotes can be used in lieu of straight quotes by enclosing the text like so. You can nest quotes within quotes.
 
@@ -113,7 +113,7 @@ Smart quotes can be used in lieu of straight quotes by enclosing the text like s
 <q>To be or not be.</q>
 ```
 
-### Utility Classes
+### About Utility Classes
 
 Utility classes are also available to modify layout and counter behavior.
 
@@ -128,7 +128,7 @@ Utility classes are also available to modify layout and counter behavior.
 * `counter-skip`: do not count this header
 * `counter-reset`: reset counter to 0
 
-## Customization
+## About Customization
 
 One of the major advantages of PubCSS is that you can use CSS to customize the style. All of the usual rules apply.
 
