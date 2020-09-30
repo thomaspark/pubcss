@@ -18,7 +18,7 @@ Check out sample output [here](http://thomaspark.me/2015/01/pubcss-formatting-ac
 2. Link your HTML to the relevant `pub.css` stylesheet
 3. Build to PDF using Prince with the command `prince input.html output.pdf`
 
-The only dependency is [Prince](http://www.princexml.com/), which is free for non-commercial use.
+The only dependency is [Prince](http://www.princexml.com/), which is free for non-commercial use. Commercial use is prohibited !!!
 
 ## Reference
 
