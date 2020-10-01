@@ -28,10 +28,10 @@ Sections and subsections are automatically numbered by following this pattern.
 
 
 ```html
-<h1>Section Header</h1>
-<section>
+<h1>Section Header</h1> <!--This is The Biggest tag in Html-->
+<section>                <!--This is The Section tag in Html-->
   <h2>Subsection Header</h2>
-  <p>Lorem ipsum</p>
+  <p>Lorem ipsum</p> <!--This is The Paragraph tag in Html-->
 </section>
 ```
 
@@ -40,14 +40,14 @@ Sections and subsections are automatically numbered by following this pattern.
 Figures and tables are also numbered if you include a caption.
 
 ```html
-<table>
-  <tr><td>1</td><td>2</td></tr>
-  <caption>Example Table</caption>
+<table> <!--This is The Table tag in Html-->
+  <tr><td>1</td><td>2</td></tr>    <!--td is the table data tag and tr is a table row tag in Html-->
+  <caption>Example Table</caption>  <!--This is The Caption tag in Html-->
 <table>
 
-<figure>
-  <img src="graph.png">
-  <figcaption>Example Figure</figcaption>
+<figure>    <!--This is The Figure tag in Html-->
+  <img src="graph.png">    <!--This is The Image tag in Html-->
+  <figcaption>Example Figure</figcaption>  <!--This is The Figure-Caption tag in Html-->
 </figure>
 ```
 
@@ -56,19 +56,19 @@ Figures and tables are also numbered if you include a caption.
 References are also numbered. Be sure to assign them unique IDs.
 
 ```html
-<cite id="nicole">Nicole. 2015. Title of paper. <em>Journal</em>, 4(3), 1-10.</cite>
+<cite id="nicole">Nicole. 2015. Title of paper. <em>Journal</em>, 4(3), 1-10.</cite> <!--This is The Cite tag in Html-->
 ```
 
 Citations to the references make use of these IDs.
 
 ```html
-<a href="#nicole"></a>
+<a href="#nicole"></a> <!--This is The Anchor/Inline tag in Html-->
 ```
 
 Multiple citations can be made in one set of brackets.
 
 ```html
-<span class="cites"><a href="#beeker"></a><a href="#jackie"></a><a href="#kiwi"></a></span>
+<span class="cites"><a href="#beeker"></a><a href="#jackie"></a><a href="#kiwi"></a></span>  <!--This is The Span/Inline tag in Html-->
 ```
 
 Sections, tables, and figures can also be referenced by adding a class.
@@ -84,10 +84,10 @@ Sections, tables, and figures can also be referenced by adding a class.
 Equations are also numbered. MathML is well-supported by Prince. For the web, you’ll need [MathJax](http://www.mathjax.org/) to render MathML properly in Chrome and Internet Explorer.
 
 ```html
-<div class="equation">
+<div class="equation"> <!--This is The Division tag in Html-->
   <math xmlns="http://www.w3.org/1998/Math/MathML">
-    <mi>E</mi>
-    <mo>=</mo>
+    <mi>E</mi> <!--This is The Math-input tag in Html-->
+    <mo>=</mo> <!--This is The Math-Outpt tag in Html-->
     <mi>m</mi>
     <msup>
       <mi>c</mi>
