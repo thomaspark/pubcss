@@ -1,0 +1,56 @@
+th {
+  font-weight: normal;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+code a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tex,
+.latex {
+  text-transform: uppercase;
+}
+
+.tex > span,
+.latex > span {
+  line-height: 0;
+  text-transform: uppercase;
+}
+
+.latex > :first-child {
+  margin-left: -0.36em;
+  margin-right: -0.15em;
+  vertical-align: 0.3em;
+  font-size: 70%;
+}
+
+.tex > :last-child,
+.latex > :last-child {
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+  vertical-align: -0.5ex;
+}
+
+.table-comments {
+  width: auto;
+  margin: auto;
+  float: column-top;
+  column-span: all;
+}
+
+.table-comments th,
+.table-comments td {
+  padding-left: 2pt;
+  padding-right: 2pt;
+}
+
+.table-comments th:nth-child(3),
+.table-comments td:nth-child(3) {
+  text-align: left;
+}

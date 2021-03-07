@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Structural Engine</title>
+</head>
+<body>
+
+
+
+
 # PubCSS
 
 PubCSS is a library of CSS stylesheets and HTML templates for formatting academic publications for print and the web.
@@ -133,3 +143,71 @@ Utility classes are also available to modify layout and counter behavior.
 One of the major advantages of PubCSS is that you can use CSS to customize the style. All of the usual rules apply.
 
 To create a new theme, you’ll want to dig into the LESS source. The most common changes can be made through `variables.less`, such as toggling page numbers and setting counter styles. The rest can be included in `custom.less`.
+
+
+# vscode-pandoc
+
+The vscode-pandoc [Visual Studio Code](https://code.visualstudio.com/) extension lets you quickly render markdown files as a `pdf`, `word document` or `html` file.
+
+## Prerequisites
+
+You need to [install Pandoc](http://pandoc.org/installing.html) - a universal document converter.
+
+## Usage
+
+Two ways to run the extension. You need to have a markdown file open.
+
+1. press `F1` on Windows (`shift+cmd+P` on Mac), type `pandoc`, press `Enter`
+1. Or - press the key chord `ctrl+K` then `P` (`cmd+K` then `P` on Mac)
+Then choose from the list what document type you want to render and press `enter` (you can also type in the box rather than cursor around).
+
+![Enlarged version of the video](https://raw.githubusercontent.com/dfinke/vscode-pandoc/master/images/vscodePandoc.gif).
+
+## Setting additional pandoc options
+
+1. choose 'Preference -> UserSettings'
+1. Find: pandoc in Default Settings
+1. Copy and paste
+1. to settings.json
+
+exsample:
+```json
+//-------- Pandoc Option Configuration --------
+
+// pandoc .pdf output option template that you would like to use
+"pandoc.pdfOptString": "",
+
+// pandoc .docx output option template that you would like to use
+"pandoc.docxOptString": "",
+
+// pandoc .html output option template that you would like to use
+"pandoc.htmlOptString": ""
+```
+
+## Example: Setting for Japanese document
+
+- PDF
+
+  `"pandoc.pdfOptString": "--latex-engine=lualatex -V documentclass=ltjarticle -V geometry:a4paper -V geometry:margin=2.5cm -V geometry:nohead",`
+
+  - `--latex-engine=lualatex`: need to create a Japanese PDF
+  - `-V documentclass=ltjarticle`: need to create a Japanese PDF
+  - `-V geometry:a4paper -V geometry:margin=2.5cm -V geometry:nohead"`: geometory options
+  
+- Word(docx)
+
+  `pandoc.docxOptString": "",`
+
+  - It will work even if you do not set the options.
+
+- HTML5
+
+  `"pandoc.htmlOptString": "-s -t html5"`
+
+  - `-s`: produce a standalone document
+  - `-t html5`: HTML5 output format
+
+For more information please refer to the [Pandoc User's Guide](http://pandoc.org/README.html).
+
+
+</body>
