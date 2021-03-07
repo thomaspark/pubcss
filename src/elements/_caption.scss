@@ -1,9 +1,0 @@
-caption {
-  caption-side: $caption-side;
-  font-weight: $caption-weight;
-  margin: $caption-margin;
-
-  &::before {
-    content: $table-prefix counter(table) $table-suffix;
-  }
-}

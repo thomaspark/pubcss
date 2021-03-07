@@ -1,9 +1,0 @@
-.cites {
-  > :not(:first-child)::before {
-    content: none;
-  }
-
-  > :not(:last-child)::after {
-    content: $cites-separator;
-  }
-}

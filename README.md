@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <title>Structural Engine</title>
-</head>
-<body>
-
-
-
-
 # PubCSS
 
 PubCSS is a library of CSS stylesheets and HTML templates for formatting academic publications for print and the web.
@@ -210,4 +200,7 @@ exsample:
 For more information please refer to the [Pandoc User's Guide](http://pandoc.org/README.html).
 
 
-</body>
+
+# vivliostyle
+
+https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://github.com/sasaco/box_paper/blob/master/docs/index.html

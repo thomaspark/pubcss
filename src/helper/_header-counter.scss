@@ -1,9 +1,0 @@
-@mixin header-counter() {
-  @if $header-counter-enabled {
-    @include generate-counter-increments();
-    @include generate-counter-resets();
-    @include generate-counter-content();
-  }
-}
-
-@include header-counter;
