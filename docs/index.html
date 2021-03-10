@@ -2,15 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>ニューラルネットワークによるボックスカルバートの部材厚予測</title>
-    <link rel="stylesheet" href="./css/pubcss-acm-sig.css">
-    <link rel="stylesheet" href="./css/my-table-style.css">
+    <title>機械学習を用いた線路下カルバートの部材寸法の最適化</title>
+    <link rel="stylesheet" href="./css/pubcss-acm-sig.css" />
+    <link rel="stylesheet" href="./css/my-table-style.css" />
   </head>
   <body>
-
     <header class="counter-skip">
-      <h1 class="title">ニューラルネットワーク<em>NN</em> によるボックスカルバートの部材厚予測</h1>
-      <h2>設計する前に最適部材厚を予測する</h2>
+      <h1 class="title">機械学習を用いた線路下カルバートの部材寸法の最適化</h1>
       <div class="authors col-2">
         <div class="author">
           <div>笹澤 陽佑</div>
@@ -24,81 +22,120 @@
     </header>
 
     <div class="copyright">
-      <div>
-      </div>
+      <div></div>
     </div>
 
     <h1>要旨 (Abstract)</h1>
     <div class="abstract counter-skip">
-      <p>
-        この論文は...であり...であるための...である
-      </p>
+      <p>本研究は,</p>
     </div>
 
     <section>
       <h1>初めに (Intoro)</h1>
       <p>
-        ボックスカルバートとは，地盤または盛土中に構築する箱型ラーメン構造物であり，道路，河川，鉄道などが立体交差する際に用いられる構造物である．図-1に示すような線路下を横断するボックスカルバートは，地上を走行する列車を支持する構造物となるため，鉄道基準に定められている要求性能を満たす構造とする必要がある．本研究では，線路下を横断するボックスカルバート（以下，「線路下ボックスカルバート」と表記）の設計事例を分析し，ボックスカルバートの部材寸法と鉄筋量の関係を把握する検討を行ったので，その結果を報告する．なお，線路下ボックスカルバートの形状や部材寸法に関する傾向については，既往文献[1] を参照されたい
+        ボックスカルバートとは，地盤または盛土中に構築する箱型ラーメン構造物であり，
+        道路，河川，鉄道などが立体交差する際に用いられる構造物である．
+        <strong>図 1</strong> に示すような線路下を横断するボックスカルバートは，
+        地上を走行する列車を支持する構造物となるため，
+        鉄道基準に定められている要求性能を満たす構造とする必要がある．
+      </p>
+      <p>
+        鉄道基準に定められている要求性能を満たすための設計を行う場合
+        <strong>図 2</strong> に示すように部材の厚みを変えた解析を数ケース行い、
+        得られた解析結果から設計仕様を満足するうち
+        最も経済的な部材厚を設計で採用するのが通常の方法である。
+        部材厚の決定では設計技術者の経験から検討パターンを決め、
+        得られた解析結果の評価も設計技術者の経験に基づいて行っている。
+      </p>
+      <p>
+        この方法で得られた部材厚が必ずしも最適な部材厚とは言えないが、
+        解析モデルの作成と解析に要する手間と時間の制約から、
+        実務の設計レベルでこれ以上の検討を行うことは難しい。
+        そこで、設計技術者の経験に依存しない最適な部材厚を求めるために、
+        人口知能の活用を図った。この方法では次の2ステップで検討を行う。
+        ステップ-1 では、存在しうるボックスカルバートの設計条件をランダムに
+        設定した設計データを数百万件 用意する。 ステップ-2 では、ステップ-1
+        で得られた数百万の設計データとその解析結果を
+        用いて機械学習を行い、設計条件から解析結果を予測した。
+        そして、学習結果を潜在空間に表示することによって、最適な部材厚の可視化を図っている。
       </p>
       <figure>
-        <img src="./img/box1.png" id="figure1" style="width: 80%;">
+        <img
+          src="./img/box1.png"
+          id="figure1"
+          style="width: 80%"
+        />box_shape.png
         <figcaption>線路下を横断するボックスカルバート</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./img/box_shape.png" id="figure1" style="width: 80%" />
+        <figcaption>部材の厚みを変えた解析ケースのイメージ</figcaption>
       </figure>
 
       <h2>検討対象とした線路下ボックスカルバートの構造形式</h2>
       <p>
-        検討対象とした線路下ボックスカルバートの構造形式は，施工実績の多い鉄筋コンクリート構造とした．構造形式が鉄筋コンクリート構造となる線路下横断構造物の施工法としては，開削工法では工事桁工法や仮線工法，非開削工法ではR&C工法やフロンテジャッキング工法などが一般的であるため，上記に該当する設計事例を対象として部材寸法と鉄筋量の分析を行うこととした．
+        検討対象とした線路下ボックスカルバートの構造形式は，施工実績の多い鉄筋コンクリート構造とした．
       </p>
-
-      <h2>事例分析</h2>
-      <p>
-        検討対象とした線路下ボックスカルバートの構造形式は，施工実績の多い鉄筋コンクリート構造とした．構造形式が鉄筋コンクリート構造となる線路下横断構造物の施工法としては，開削工法では工事桁工法や仮線工法，非開削工法ではR&C工法やフロンテジャッキング工法などが一般的であるため，上記に該当する設計事例を対象として部材寸法と鉄筋量の分析を行うこととした．
-      </p>
-
+      <p>今回のプロトタイプでは、<strong>図 3</strong> の形式で表せる形状のみを対象とする</p>
+      <figure>
+        <img src="./img/box_input_shape.png" id="figure1" style="width: 80%" />
+        <figcaption>形状条件</figcaption>
+      </figure>
 
     </section>
 
-
     <section>
-      <h1>関連研究、先行研究 (Related work))</h1>
+      <h1>関連研究、先行研究 (Related work)</h1>
+      <h2>検討対象としたボックスカルバートの設計手法</h2>
       <p>
-        The <em>proceedings</em> are the records of a conference. ACM seeks to give these conference by-products a uniform, high-quality appearance. To do this, ACM has some rigid requirements for the format of the proceedings documents: there is a specified format (balanced  double columns), a specified set of fonts (Arial or Helvetica and Times Roman) in certain specified sizes (for instance, 9 point for body copy), a specified live area (18 &times; 23.5 cm [7" &times; 9.25"]) centered on the page, specified size of margins (1.9 cm [0.75"]) top, (2.54 cm [1"]) bottom and (1.9 cm [.75"]) left and right; specified column width (8.45 cm [3.33"]) and gutter size (.83 cm [.33"]).
-        The good news is, with only a handful of manual settings<span class="footnote">Two of these, the <code>\numberofauthors</code> and <code>\alignauthor</code> commands, you have already used; another, <code>\balancecolumns</code>, will be used in your very last run of <span class="latex">L<span>a</span>T<span>e</span>X</span> to ensure balanced column heights on the last page.</span>, the <span class="latex">L<span>a</span>T<span>e</span>X</span> document class file handles all of this for you.
-        The remainder of this document is concerned with showing, in the context of an <q>actual</q> document, the <span class="latex">L<span>a</span>T<span>e</span>X</span> commands specifically available for denoting the structure of a proceedings paper, rather than with giving rigorous descriptions or explanations of such commands.
+        設計手法は，性能照査型設計法とし、材料や構造、照査手法等を規定せず、
+        一般に安全性/使用性/復旧性に対する要求性能を設定し、
+        設定された要求性能を照査するものとする。
       </p>
+
+      <h2>深層ニューラルネットワークによる予測技術</h2>
+      <p>
+        深層ニューラルネットワークによる新しい近似モデルの研究も行われている
+      </p>
+
     </section>
 
     <section>
       <h1>提案手法 (Proposal)</h1>
+      <h2>存在しうるボックスカルバートの設計条件をランダムに設定した設計データの生成</h2>
       <p>
-        Typically, the body of a paper is organized into a hierarchical structure, with numbered or unnumbered headings for sections, subsections, sub-subsections, and even smaller sections. The command \section that precedes this paragraph is part of such a hierarchy.<span class="footnote">This is the second footnote. It starts a series of three footnotes that add nothing informational, but just give an idea of how footnotes work and look. It is a wordy one, just so you see how a longish one plays out.</span> <span class="latex">L<span>a</span>T<span>e</span>X</span> handles the numbering and placement of these headings for you, when you use the appropriate heading commands around the titles of the headings. If you want a sub-subsection or smaller part to be unnumbered in your output, simply append an asterisk to the command name. Examples of both numbered and unnumbered headings will appear throughout the balance of this sample document.
-        Because the entire article is contained in the <strong>document</strong> environment, you can indicate the start of a new paragraph with a blank line in your input file; that is why this sentence forms a separate paragraph.
+        あ
       </p>
+
+      <h2>数百万の設計データとその解析結果を用いて機械学習を行い、設計条件から解析結果を予測する</h2>
+      <p>
+        あ
+      </p>
+
     </section>
 
     <section>
       <h1>実験結果 (Experiment and Result)</h1>
-      <p>This paragraph will end the body of this sample document. Remember that you might still have Acknowledgments or Appendices; brief samples of these follow. There is still the Bibliography to deal with; and we will make a disclaimer about that here: with the exception of the reference to the <span class="latex">L<span>a</span>T<span>e</span>X</span> book, the citations in this paper are to articles which have nothing to do with the present subject and are used as examples only.</p>
+      <p>
+        設計条件から解析結果を予測する
+      </p>
     </section>
 
     <section>
       <h1>結論 (Conclusion)</h1>
-      <p>This paragraph will end the body of this sample document. Remember that you might still have Acknowledgments or Appendices; brief samples of these follow. There is still the Bibliography to deal with; and we will make a disclaimer about that here: with the exception of the reference to the <span class="latex">L<span>a</span>T<span>e</span>X</span> book, the citations in this paper are to articles which have nothing to do with the present subject and are used as examples only.</p>
+      <p>
+      </p>
     </section>
-
 
     <section>
       <h1>参考文献 (References)</h1>
 
-      <cite>Bowman, M., Debray, S. K., and Peterson, L. L. 1993. Reasoning about naming systems. <em>ACM Trans. Program. Lang. Syst.</em> 15, 5 (Nov. 1993), 795-825.</cite>
-
-      <cite>J. Braams. Babel, a multilingual style-option system for use with <span class="latex">L<span>a</span>T<span>e</span>X</span>’s standard document styles. <em>TUGboat</em>, 12(2):291–301, June 1991.</cite>
-
-      <cite>M. Clark. Post congress tristesse. In <em>TeX90 Conference Proceedings</em>, pages 84–89. TeX Users Group, March 1991.</cite>
-
-      <cite>M. Herlihy. A methodology for implementing highly concurrent data objects. <em>ACM Trans. Program. Lang. Syst.</em>, 15(5):745–770, November 1993.</cite>
+      <cite>
+        柳川一心，今枝潤志，石橋孝通：線路下ボックスカルバートの構造プロポーションに関する検討，土木学会 平成 28 年度全国大会 第
+        71 回年次学術講演会 Ⅵ-107 
+      </cite>
 
     </section>
-
   </body>
 </html>

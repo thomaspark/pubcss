@@ -28,7 +28,7 @@ a[href^="#"] {
   a[href^="#"].figure {
     content: target-counter(attr(href, url), figure); }
     a[href^="#"].figure::before {
-      content: "Figure "; }
+      content: "図 "; }
     a[href^="#"].figure::after {
       content: ''; }
   a[href^="#"].table {
@@ -85,7 +85,7 @@ figure {
 figcaption {
   font-weight: bold; }
   figcaption::before {
-    content: "Figure " counter(figure) ". "; }
+    content: "図 " counter(figure) ". "; }
 
 h1,
 h2,
