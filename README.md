@@ -24,7 +24,7 @@ The only dependency is [Prince](http://www.princexml.com/), which is free for no
 
 ### Sections
 
-Sections and subsections are automatically numbered by following this pattern.
+Sections and subsections are automatically numbered by following the pattern below.
 
 
 ```html
