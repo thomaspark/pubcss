@@ -1,0 +1,4 @@
+# Function dependencies, for example:
+# package>=version
+numpy==1.18.5
+scipy==1.5.3
