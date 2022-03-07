@@ -6,7 +6,7 @@ import pandas as pd
 
 def insert_csv():
 
-    db_path = './disg.db'
+    db_path = '../server/disg.db'
 
     csv_files=glob('./disg/*.csv')
 
