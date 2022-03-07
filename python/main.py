@@ -1,4 +1,4 @@
-import json
+import os
 from test_data import testData
 from calcrate import FrameCalc
 from dataInput import dataInput
@@ -16,6 +16,12 @@ if error != None:
 for i in range(0, 5151, 101):
     for j in range(51):
         n = i+j
+
+        fname1 = "./csv/disg/{}.csv".format(n)
+        if os.path.exists(fname1):
+            print('skip {}'.format(n))
+            continue
+
         lo = inp.load["1"]
         load_node = lo["load_node"]
         load = load_node[0]
@@ -36,7 +42,7 @@ for i in range(0, 5151, 101):
         df_reac = pd.DataFrame.from_dict(reac)
         df_fsec = pd.DataFrame.from_dict(fsec)
 
-        df_disg.to_csv("./csv/disg/{}.csv".format(n))
+        df_disg.to_csv(fname1) # "./csv/disg/{}.csv".format(n))
         df_reac.to_csv("./csv/reac/{}.csv".format(n))
         df_fsec.to_csv("./csv/fsec/{}.csv".format(n))
 
