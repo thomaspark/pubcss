@@ -6,6 +6,7 @@ import numpy as np
 def insert_csv():
 
     dz_path = './dz.csv'
+    rx_path = './rx.csv'
     ry_path = './ry.csv'
 
     csv_files=glob('./disg/*.csv')
@@ -24,6 +25,7 @@ def insert_csv():
 
     # 結果を格納する変数
     dz = pd.DataFrame(np.zeros((len(lpoint),len(apoint))), index=lpoint, columns=apoint) # z軸方向の変位量
+    rx = pd.DataFrame(np.zeros((len(lpoint),len(apoint))), index=lpoint, columns=apoint) # y軸周りの回転角
     ry = pd.DataFrame(np.zeros((len(lpoint),len(apoint))), index=lpoint, columns=apoint) # y軸周りの回転角
 
     # すべての csvファイル
@@ -35,14 +37,17 @@ def insert_csv():
         l = pd.read_csv(file, index_col=0)
 
         cdz = l[2:3] # z軸方向の変位量
+        crx = l[3:4] # x軸周りの回転角
         cry = l[4:5] # y軸周りの回転角
 
         for c in apoint:
             col = str(c)
             dz.at[r, c] = cdz[col]
+            rx.at[r, c] = crx[col]
             ry.at[r, c] = cry[col]
 
     dz.to_csv(dz_path)
+    rx.to_csv(rx_path)
     ry.to_csv(ry_path)
 
 if __name__ == '__main__':
